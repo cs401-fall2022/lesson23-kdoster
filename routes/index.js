@@ -60,6 +60,25 @@ router.post('/add', (req, res, next) => {
   );
 })
 
+router.post('/update', (req, res, next) => {
+  console.log("Updating table entry without any sanitization. May change later. Probably not.");
+  var db = new sqlite3.Database('mydb.sqlite3',
+    sqlite3.OPEN_READWRITE | sqlite3.OPEN_CREATE,
+    (err) => {
+      if (err) {
+        console.log("Getting error " + err);
+        exit(1);
+      }
+      console.log("updating blog " + req.body.blog_id + " with " + req.body.blog_txt);
+      //Unsanitized input. Not for production
+      db.exec(`update blog set blog_txt = '${req.body.blog_txt}' 
+                where blog_id = '${req.body.blog_id}';`)
+      //redirect to hompepage
+      res.redirect('/');
+    }
+  );
+})
+
 router.post('/delete', (req, res, next) => {
   console.log("deleting stuff without checking if it is valid! SEND IT!");
   var db = new sqlite3.Database('mydb.sqlite3',
