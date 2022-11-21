@@ -3,6 +3,16 @@ extends layout
 block content
   h1= title
   p Welcome to #{title}
+
+block insert 
+  h2= "New blog entry"
+  form(action="/add" method = "POST")
+    p Entry: 
+      input(type="text" name="blog" placeholder="")
+    input(type="submit")
+
+block blogs
+  h2="Current blog entries"
   table(style='width:100%', border='1')
     tr
       th Blog ID 
