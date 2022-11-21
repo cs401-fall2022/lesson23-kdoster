@@ -31,3 +31,10 @@ block edit
       input(type="text" name="blog_txt" placeholder="")
     input(type="submit")
 
+block delete
+  h2="Delete entry"
+  form(action="/delete" method="POST")
+    p Blog ID: 
+      input(type="text" name="blog" placeholder="")
+    input(type="submit")
+
