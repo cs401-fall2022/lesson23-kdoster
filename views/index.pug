@@ -3,3 +3,12 @@ extends layout
 block content
   h1= title
   p Welcome to #{title}
+  table(style='width:100%', border='1')
+    tr
+      th Blog ID 
+      th Blog Entry 
+    for blog in data
+      tr
+        td #{blog.blog_id} 
+        td #{blog.blog_txt}
+
