@@ -1,7 +1,12 @@
+html {
+  background-image: url(../images/shanepanter.jpg);
+  background-size: 100% 100%;
+  background-repeat: no-repeat;
+}
+
 body {
   padding: 50px;
   font: 14px "Comic Sans MS", "Comic Sans", cursive, sans-serif;
-  background-image: url(../images/shanepanter.jpg);
 }
 
 h1 {
@@ -16,6 +21,7 @@ h2 {
 
 p {
   background-color: aquamarine;
+  width: 250px;
 }
 
 tr {
