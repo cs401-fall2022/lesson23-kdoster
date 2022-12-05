@@ -58,7 +58,7 @@ router.post('/add', (req, res, next) => {
       res.redirect('/');
     }
   );
-})
+});
 
 router.post('/update', (req, res, next) => {
   console.log("Updating table entry without any sanitization. May change later. Probably not.");
@@ -77,7 +77,7 @@ router.post('/update', (req, res, next) => {
       res.redirect('/');
     }
   );
-})
+});
 
 router.post('/delete', (req, res, next) => {
   console.log("deleting stuff without checking if it is valid! SEND IT!");
@@ -97,6 +97,6 @@ router.post('/delete', (req, res, next) => {
       res.redirect('/');
     }
   );
-})
+});
 
 module.exports = router;
