@@ -1,6 +1,21 @@
 body {
   padding: 50px;
   font: 14px "Comic Sans MS", "Comic Sans", cursive, sans-serif;
+  background-image: url(../images/shanepanter.jpg);
+}
+
+h1 {
+  background-color: lightcoral;
+  display: inline-block;
+}
+
+h2 {
+  background-color: lightgreen;
+  display: inline-block;
+}
+
+p {
+  background-color: aquamarine;
 }
 
 tr {
@@ -11,6 +26,7 @@ tr {
 table {
   border: none;
   border-collapse: collapse;
+  background-color: aqua;
 }
 
 a {
