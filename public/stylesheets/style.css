@@ -1,6 +1,16 @@
 body {
   padding: 50px;
-  font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+  font: 14px "Comic Sans MS", "Comic Sans", cursive, sans-serif;
+}
+
+tr {
+  border: 1px solid;
+  padding: 50px;
+}
+
+table {
+  border: none;
+  border-collapse: collapse;
 }
 
 a {

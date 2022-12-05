@@ -5,36 +5,40 @@ block content
   p Welcome to #{title}
 
 block insert 
-  h2= "New blog entry"
-  form(action="/add" method = "POST")
-    p Entry: 
-      input(type="text" name="blog" placeholder="")
-    input(type="submit")
+  .insert
+    h2= "New blog entry"
+    form(action="/add" method = "POST")
+      p Entry: 
+        input(type="text" name="blog" placeholder="")
+      input(type="submit")
 
 block blogs
-  h2="Current blog entries"
-  table(style='width:100%', border='1')
-    tr
-      th Blog ID 
-      th Blog Entry 
-    for blog in data
+  .blogs
+    h2="Current blog entries"
+    table(style='width:100%', border='1')
       tr
-        td #{blog.blog_id} 
-        td #{blog.blog_txt}
+        th Blog ID 
+        th Blog Entry 
+      for blog in data
+        tr
+          td #{blog.blog_id} 
+          td #{blog.blog_txt}
 
 block edit
-  h2="Edit existing entry"
-  form(action="/update" method="POST")
-    p Blog ID: 
-      input(type="text" name="blog_id" placeholder="")
-    p Blog Text: 
-      input(type="text" name="blog_txt" placeholder="")
-    input(type="submit")
+  .edit
+    h2="Edit existing entry"
+    form(action="/update" method="POST")
+      p Blog ID: 
+        input(type="text" name="blog_id" placeholder="")
+      p Blog Text: 
+        input(type="text" name="blog_txt" placeholder="")
+      input(type="submit")
 
 block delete
-  h2="Delete entry"
-  form(action="/delete" method="POST")
-    p Blog ID: 
-      input(type="text" name="blog" placeholder="")
-    input(type="submit")
+  .delete
+    h2="Delete entry"
+    form(action="/delete" method="POST")
+      p Blog ID: 
+        input(type="text" name="blog" placeholder="")
+      input(type="submit")
 
